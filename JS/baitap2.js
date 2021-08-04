@@ -12,14 +12,22 @@
  * xuất ra màn hình giá trị trung bình 5 số thực vừa tìm (average)
  */
 
- var num1 = 1;
- var num2 = 2;
- var num3 = 3;
- var num4 = 4;
- var num5 = 5;
- var average = 0;
+
+document.getElementById("btnAverage").onclick = function(){
+    var average = 0;
+    var num1 = parseFloat(document.getElementById("inputNumber1").value);
+    var num2 = parseFloat(document.getElementById("inputNumber2").value);
+    var num3 = parseFloat(document.getElementById("inputNumber3").value);
+    var num4 = parseFloat(document.getElementById("inputNumber4").value);
+    var num5 = parseFloat(document.getElementById("inputNumber5").value);
+
+    average = (num1+num2+num3+num4+num5)/5;
+
+    document.getElementById("txtAverage").innerHTML = "Số trung bình cần tính là: " +average;
+}
  
- average = (num1+num2+num3+num4+num5)/5
  
- console.log("Giá trị trung bình là: "+ average)
+ 
+ 
+ 
  

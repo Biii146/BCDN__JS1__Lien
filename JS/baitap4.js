@@ -4,25 +4,31 @@
  * chiều rộng từ người dùng nhập vào
  * 
  * PROCESS:
- * B1: tạo biến và gán giá trị cho số chiều dài: dai
- * B2: tạo biến và gán giá trị cho số chiều rộng : rong
- * B3: tạo biến chưa giá trị chu vi: chuvi
- * B4: tạo biến chưa giá trị diện tích: dientich
- * B5: xây dựng công thức tính chu vi: chuvi = (dai+rong)*2
- * B6: xây dựng công thức tính diện tích: dientich = dai*rong
+ * tạo biến và lấy giá trị từ form
+ * B1: tạo biến và gán giá trị cho số chiều dài: height
+ * B2: tạo biến và gán giá trị cho số chiều rộng : base
+ * B3: tạo biến chưa giá trị chu vi: perimeter
+ * B4: tạo biến chưa giá trị diện tích: area
+ * B5: xây dựng công thức tính chu vi: perimeter = (height + base) * 2;
+ * B6: xây dựng công thức tính diện tích: area = height * base;
  * 
  * OUTPUT:
  * xuất ra màn hình chu vi và diện tích hình chữ nhật
  */
 
- var dai = 30;
- var rong = 20;
- var chuvi = 0;
- var dientich = 0;
+document.getElementById("btnResult").onclick = function(){
+    perimeter = 0;
+    area = 0;
+    height = parseFloat(document.getElementById("inputHeight").value);
+    base = parseFloat(document.getElementById("inputBase").value);
+
+    perimeter = (height + base) * 2;
+    area = height * base;
+
+    document.getElementById("txtResult").innerHTML = "Chu vi hình chữ nhật là: "+perimeter+"<br> Diện tích hình chữ nhật là: "+area;
+
+}
  
- chuvi = (dai+rong)*2;
- dientich = dai*rong;
  
- console.log("Chu vi hình chữ nhật là:" +chuvi);
- console.log("Diện tích hình chữ nhật là:" +dientich);
+ 
  
